@@ -2,9 +2,9 @@ name: Daily Birthday Reminder
 
 on:
   schedule:
-    - cron: '0 6 * * *'
-  workflow_dispatch:
-
+    # This runs at 19:30 UTC every day, which is 01:00 AM IST
+    - cron: '30 19 * * *'
+  workflow_dispatch: # This allows you to also run it manually for testing
 jobs:
   build:
     runs-on: ubuntu-latest
