@@ -3,9 +3,11 @@ import pandas as pd
 from datetime import datetime
 import smtplib
 
-# 🔐 Email
-MY_EMAIL = "hozaifaiqbal0853@gmail.com"
-APP_PASSWORD = "ncwfkbcorbxvpago"
+import os
+
+# 🔐 Pulling credentials securely from Environment Variables
+MY_EMAIL = os.getenv("MY_EMAIL")
+APP_PASSWORD = os.getenv("APP_PASSWORD")
 
 # 🔗 Google Sheets
 gc = gspread.service_account(filename="birthday-reminder.json")
